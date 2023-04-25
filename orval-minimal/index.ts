@@ -7,9 +7,9 @@ const start = async () => {
   appNode.innerHTML = "";
 
   roads?.forEach((road) => {
-    const userNode = document.createElement("div");
-    userNode.innerHTML = road;
-    appNode.appendChild(userNode);
+    const roadElement = document.createElement("div");
+    roadElement.innerHTML = road;
+    appNode.appendChild(roadElement);
   });
 };
 
