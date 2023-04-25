@@ -1,0 +1,23 @@
+{
+  "name": "trpc-minimal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "backend": "ts-node backend/index.ts",
+    "dev": "vite --cors web"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@trpc/client": "^10.21.1",
+    "@trpc/server": "^10.21.1",
+    "typescript": "^5.0.4",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.0",
+    "ts-node": "^10.9.1",
+    "vite": "^4.3.1"
+  }
+}
