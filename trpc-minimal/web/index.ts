@@ -23,7 +23,4 @@ const start = async () => {
     })
 }
 
-
 start()
-
-console.log("Hello World")
