@@ -11,15 +11,15 @@ const trpc = createTRPCProxyClient<AppRouter>({
 
 const start = async () => {
     const appNode = document.getElementById('app')!
-    const users = await trpc.userList.query()
-
     // empty the appNode
     appNode.innerHTML = ''
 
+    const users = await trpc.userList.query();
+
     users.forEach(user => {
-        const userNode = document.createElement('div')
-        userNode.innerHTML = user
-        appNode.appendChild(userNode)
+        const userElement = document.createElement('div');
+        userElement.innerHTML = user;
+        appNode.appendChild(userElement)
     })
 }
 

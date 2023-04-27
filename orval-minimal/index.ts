@@ -1,14 +1,18 @@
-import { listAutobahnen } from "./api/autobahnAppAPI";
+import { listAutobahnen, listWebcams } from "./api/autobahnAppAPI";
 
 const start = async () => {
   const appNode = document.getElementById("app")!;
-  const { roads } = await listAutobahnen();
 
   appNode.innerHTML = "";
 
-  roads?.forEach((road) => {
+  const response = await listAutobahnen();
+  const roads = response.roads;
+
+  roads.forEach((road) => {
     const roadElement = document.createElement("div");
-    roadElement.innerHTML = road;
+    roadElement.innerHTML = road.toLowerCase();
+    listWebcams(road);
+
     appNode.appendChild(roadElement);
   });
 };
