@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "backend": "ts-node backend/index.ts",
-    "dev": "vite --cors web"
+    "dev": "vite -c vite.config.js --cors web"
   },
   "author": "",
   "license": "ISC",
